@@ -2,100 +2,159 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Used BMW Cars</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Used BMWs For Sale</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      font-family: Verdana, sans-serif;
+      background: #f0f0f0;
     }
+
     header {
-      background-color: #333;
+      background: #111;
       color: white;
-      padding: 1rem;
+      padding: 20px;
       text-align: center;
     }
-    .nav-section {
+
+    .navbar {
       display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 1rem;
-      background-color: #444;
-    }
-    .nav-item {
-      background-color: #ddd;
-      text-align: center;
-      padding: 0.8rem;
-      width: 120px;
-      font-size: 0.9rem;
-    }
-    .main-heading {
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    .cta-button {
-      display: block;
-      margin: 1rem auto;
-      padding: 0.8rem 1.5rem;
-      background-color: #222;
+      justify-content: space-around;
+      background-color: #555;
+      padding: 10px;
       color: white;
-      border: none;
+    }
+
+    .navbar div {
       cursor: pointer;
     }
-    .search-box {
-      background-color: white;
-      margin: 2rem;
-      padding: 1rem;
-      border-radius: 5px;
-    }
-    .search-box select, .search-box button {
-      margin: 0.5rem;
-      padding: 0.5rem;
-      width: 40%;
-    }
-    .display-box {
-      background-color: #eee;
-      border: 1px solid #ccc;
-      color: #333;
+
+    .main-content {
       text-align: center;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+      padding: 30px 10px;
     }
-    @media (max-width: 600px) {
-      .nav-section {
+
+    .main-content h2 {
+      margin-bottom: 10px;
+    }
+
+    .main-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .browse-btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 15px;
+    }
+
+    .search-area {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px #ccc;
+    }
+
+    .search-area h3 {
+      text-align: center;
+      color: #333;
+    }
+
+    .search-area select,
+    .search-area button {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 10px;
+      min-width: 160px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background-color: #ddd;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .navbar {
         flex-direction: column;
         align-items: center;
       }
-      .search-box select, .search-box button {
+
+      .search-area select,
+      .search-area button {
         width: 90%;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Used BMW Website</h1>
+    <h1>Used BMW Listings</h1>
+    <p>Your one-stop place to find pre-owned BMWs</p>
   </header>
 
-  <div class="nav-section">
-    <div class="nav-item">SEARCH CARS</div>
-    <div class="nav-item">SELL BMW</div>
+  <div class="navbar">
+    <div>Find Cars</div>
+    <div>Sell or Trade</div>
+    <div>Why Approved Used?</div>
   </div>
 
-  <div class="main-heading">
-    <h2>Find Your Perfect BMW</h2>
-    <button class="cta-button">Browse Range</button>
+  <section class="main-content">
+    <h2>Welcome to the BMW Page!</h2>
+    <p>These cars are inspected. They're good to go.</p>
+    <button class="browse-btn">Browse Listings</button>
+  </section>
+
+  <section class="search-area">
+    <h3>Search Options</h3>
+    <select><option>Enter Postcode</option></select>
+    <select><option>Distance</option></select>
+    <select><option>Payment Option</option></select>
+    <select><option>Car Make</option></select>
+    <select><option>Model</option></select>
+    <select><option>Type of Body</option></select>
+    <select><option>Mileage</option></select>
+    <select><option>Fuel Economy</option></select>
+    <select><option>Fuel Type</option></select>
+    <select><option>Extras</option></select>
+    <br>
+    <button>Search (13,000+ cars!)</button>
+  </section>
+
+  <div class="footer-links">
+    <a href="#">Contact Info</a>
+    <a href="#">Feedback</a>
+    <a href="#">Trust Promise</a>
+    <a href="#">Privacy Stuff</a>
+    <a href="#">Terms (Legal Stuff)</a>
   </div>
 
-  <div class="search-box">
-    <div class="display-box">Start Searching Here!</div>
-    <select><option>Postcode</option></select>
-    <select><option>Range</option></select>
-    <button>Search</button>
-  </div>
-
+  <footer>
+    <p>&copy; 2025 Some Student BMW Project. Please don't sue me, BMW.</p>
+  </footer>
 
 </body>
 </html>
