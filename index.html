@@ -9,23 +9,24 @@
       margin: 0;
       padding: 0;
       font-family: Verdana, sans-serif;
-      background: #f0f0f0;
+      background: #f1f1f1; 
     }
 
-	header {
-	  background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662'); 
-	  background-size: cover;
- 	 background-position: center;
- 	 color: white;
- 	 padding: 60px 20px;
- 	 text-align: center;
-	}
+/* Header with background image (BMW-themed) */
+    header {
+      background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662'); 
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-
+/* Top navigation bar */
     .navbar {
       display: flex;
       justify-content: space-around;
-      background-color: #555;
+      background-color: #000000; /* BMW Themed Black */
       padding: 10px;
       color: white;
     }
@@ -34,9 +35,11 @@
       cursor: pointer;
     }
 
+    /* Main welcome section */
     .main-content {
       text-align: center;
       padding: 30px 10px;
+      background-color: #ffffff; 
     }
 
     .main-content h2 {
@@ -49,15 +52,16 @@
     }
 
     .browse-btn {
-      background-color: #333;
+      background-color: #0066b3;
       color: white;
       padding: 10px 20px;
       border: none;
       margin-top: 15px;
     }
 
+/* Search filter form */
     .search-area {
-      background-color: white;
+      background-color: #ffffff;
       margin: 20px auto;
       padding: 20px;
       max-width: 800px;
@@ -70,30 +74,27 @@
       color: #333;
     }
 
+/* Styling dropdowns and search button */
     .search-area select,
     .search-area button {
       display: inline-block;
       margin: 10px 5px;
       padding: 10px;
       min-width: 160px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
     }
 
-    .footer-links {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      background-color: #ddd;
-      padding: 15px;
-      font-size: 14px;
-    }
-
+/* Bottom Footer */
     footer {
       text-align: center;
       font-size: 12px;
       color: #666;
       padding: 10px;
+      background-color: #222222; 
     }
 
+/* Responsive adjustments for smaller screens */
     @media screen and (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -105,20 +106,18 @@
         width: 90%;
       }
 
-      .footer-links {
-        flex-direction: column;
-        align-items: center;
-      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Top header -->
   <header>
     <h1>Used BMW Listings</h1>
     <p>Your one-stop place to find pre-owned BMWs</p>
   </header>
 
+<!-- Navigation bar -->
   <div class="navbar">
     <div>Find Cars</div>
     <div>Sell or Trade</div>
@@ -131,6 +130,7 @@
     <button class="browse-btn">Browse Listings</button>
   </section>
 
+<!-- Search form contents -->
   <section class="search-area">
     <h3>Search Options</h3>
     <select><option>Enter Postcode</option></select>
@@ -147,16 +147,9 @@
     <button>Search (13,000+ cars!)</button>
   </section>
 
-  <div class="footer-links">
-    <a href="#">Contact Info</a>
-    <a href="#">Feedback</a>
-    <a href="#">Trust Promise</a>
-    <a href="#">Privacy Stuff</a>
-    <a href="#">Terms (Legal Stuff)</a>
-  </div>
-
+  <!-- Legal footer note -->
   <footer>
-    <p>&copy; 2025 Some Student BMW Project. Please don't sue me, BMW.</p>
+    <p>&copy; 2025 Some Student BMW Project. Please don't sue me BMW.</p>
   </footer>
 
 </body>
