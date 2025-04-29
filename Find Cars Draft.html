@@ -12,6 +12,7 @@
       background: #f1f1f1;
     }
 
+    /* Header with background image (BMW-themed) */
     header {
       background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662'); 
       background-size: cover;
@@ -21,10 +22,11 @@
       text-align: center;
     }
 
+    /* Navigation bar */
     .navbar {
       display: flex;
       justify-content: space-around;
-      background-color: #000000;
+      background-color: #000000; /* BMW Themed Black */
       padding: 10px;
       color: white;
     }
@@ -33,6 +35,7 @@
       cursor: pointer;
     }
 
+    /* Main content section */
     .main-content {
       text-align: center;
       padding: 30px 10px;
@@ -56,6 +59,7 @@
       margin-top: 15px;
     }
 
+    /* Car listings */
     .car-listings {
       max-width: 800px;
       margin: 20px auto;
@@ -71,6 +75,14 @@
       margin-bottom: 15px;
     }
 
+    .car img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+/* Bottom Footer */
     footer {
       text-align: center;
       font-size: 12px;
@@ -79,6 +91,8 @@
       background-color: #222222; 
     }
 
+
+    /* Responsive adjustments for smaller screens */
     @media screen and (max-width: 600px) {
       .navbar {
         flex-direction: column;
@@ -89,28 +103,50 @@
 </head>
 <body>
 
+  <!-- Top header -->
   <header>
     <h1>Find a Used BMW</h1>
     <p>Browse through our top picks!</p>
   </header>
 
+  <!-- Navigation bar -->
   <div class="navbar">
     <div>Find Cars</div>
     <div>Sell or Trade</div>
     <div>Why Approved Used?</div>
   </div>
 
+  <!-- Main content section -->
   <section class="main-content">
     <h2>Trendy Listings</h2>
     <p>Check out these trending models!</p>
   </section>
 
+  <!-- Car listings -->
   <div class="car-listings">
-    <div class="car"></div>
-    <div class="car"></div>
-    <div class="car"></div>
+    <div class="car">
+      <img src="https://m.atcdn.co.uk/vms/media/%7Bresize%7D/138cdcfef10249bfb32237baf9aa026c.jpg" alt="BMW 3 Series">
+      <h3>BMW 3 Series - 2023</h3>
+      <p>Mileage: 12,500 miles</p>
+      <p>Price: £29,024</p>
+    </div>
+
+    <div class="car">
+      <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1701420806/autoexpress/2023/11/BMW%20X5%20xDrive50%20UK%20drive%202023.jpg" alt="BMW X5">
+      <h3>BMW X5 Hybrid - 2022</h3>
+      <p>Mileage: 8,700 miles</p>
+      <p>Price: £46,640</p>
+    </div>
+
+    <div class="car">
+      <img src="https://www.chasingcars.com.au/wp-content/uploads/2021/07/BMW-M2-CS-2021-3.jpg" alt="BMW M2">
+      <h3>BMW M2 CS - 2021</h3>
+      <p>Mileage: 5,100 miles</p>
+      <p>Price: £55,214</p>
+    </div>
   </div>
 
+  <!-- Legal footer note -->
   <footer>
     <span>&copy; 2025 BMW Project. Just for university, not real.</span>
   </footer>
