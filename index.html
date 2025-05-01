@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Used BMWs For Sale</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: Verdana, sans-serif;
-      background: #f1f1f1; 
+      background: #f1f1f1;
     }
 
-/* Header with background image (BMW-themed) */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 180px;
+      background-color: #000000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 60px;
+      padding-left: 10px;
+      z-index: 1000;
+    }
+
+    .navbar div {
+      margin: 10px 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
     header {
-      background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662'); 
+      background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662');
       background-size: cover;
       background-position: center;
       color: white;
       padding: 60px 20px;
       text-align: center;
+      margin-left: 200px;
     }
 
-/* Top navigation bar */
-    .navbar {
-      display: flex;
-      justify-content: space-around;
-      background-color: #000000; /* BMW Themed Black */
-      padding: 14px;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .navbar div {
-      cursor: pointer;
-    }
-
-    /* Main welcome section */
     .main-content {
       text-align: center;
       padding: 30px 10px;
-      background-color: #ffffff; 
+      background-color: #ffffff;
+      margin-left: 200px;
     }
 
     .main-content h2 {
@@ -60,10 +72,9 @@
       margin-top: 15px;
     }
 
-/* Search filter form */
     .search-area {
       background-color: #ffffff;
-      margin: 20px auto;
+      margin: 20px auto 20px 200px;
       padding: 20px;
       max-width: 800px;
       border-radius: 5px;
@@ -75,7 +86,6 @@
       color: #333;
     }
 
-/* Styling dropdowns and search button */
     .search-area select,
     .search-area button {
       display: inline-block;
@@ -86,45 +96,51 @@
       border: 1px solid #ddd;
     }
 
-/* Bottom Footer */
     footer {
       text-align: left;
       font-size: 20px;
       color: #FFF;
       padding: 20px;
-      background-color: #000000; 
+      background-color: #000000;
+      margin-left: 200px;
     }
 
-/* Responsive adjustments for smaller screens */
     @media screen and (max-width: 600px) {
       .navbar {
-        flex-direction: column;
-        align-items: center;
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+      }
+
+      header,
+      .main-content,
+      .search-area,
+      footer {
+        margin-left: 0;
       }
 
       .search-area select,
       .search-area button {
         width: 90%;
       }
-
     }
   </style>
 </head>
 <body>
 
-  <!-- Top header -->
+  <div class="navbar">
+    <div><a href="index.html">Home</a></div>
+    <div><a href="FindCars.html">Find Cars</a></div>
+    <div><a href="#">Sell or Trade</a></div>
+    <div><a href="#">Why Approved Used?</a></div>
+  </div>
+
   <header>
     <h1>Used BMW Listings</h1>
     <p>Your one-stop place to find pre-owned BMWs</p>
   </header>
-
-<!-- Navigation bar -->
-<div class="navbar">
-  <div><a href="index.html" style="color: white; text-decoration: none;">Home</a></div>
-  <div><a href="FindCars.html" style="color: white; text-decoration: none;">Find Cars</a></div>
-  <div><a href="#" style="color: white; text-decoration: none;">Sell or Trade</a></div>
-  <div><a href="#" style="color: white; text-decoration: none;">Why Approved Used?</a></div>
-</div>
 
   <section class="main-content">
     <h2>Welcome to the BMW Page!</h2>
@@ -132,7 +148,6 @@
     <button class="browse-btn">Browse Listings</button>
   </section>
 
-<!-- Search form contents -->
   <section class="search-area">
     <h3>Search Options</h3>
     <select><option>Enter Postcode</option></select>
@@ -149,7 +164,6 @@
     <button>Search (13,000+ cars!)</button>
   </section>
 
-  <!-- footer note -->
   <footer>
     <p>&copy; Used BMW Cars for Sale</p>
   </footer>
