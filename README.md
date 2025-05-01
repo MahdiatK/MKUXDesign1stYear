@@ -109,6 +109,8 @@ Full testing was done on the following browsers:
 
 Miscoloured header in find-cars.html
 
+Postcode selection box being dropdown and not a typable area
+
 Off-centered text when making navbar align to the left 
 
 Bottom footer text moving off-centre when aligning navbar to the left
@@ -116,6 +118,8 @@ Bottom footer text moving off-centre when aligning navbar to the left
 #### Solved bugs
 
 Miscoloured header in find-cars.html
+
+Postcode selection box being dropdown and not a typable area
 
 Off-centered text when making navbar align to the left 
 
@@ -136,6 +140,8 @@ https://www.chasingcars.com.au/wp-content/uploads/2021/07/BMW-M2-CS-2021-3.jpg
 ### Code Used
 
 https://www.w3schools.com/tags/tag_img.asp
+
+https://www.w3schools.com/tags/tag_select.asp
 
 https://www.w3schools.com/howto/howto_js_sidenav.asp
 
