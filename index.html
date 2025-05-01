@@ -85,21 +85,28 @@
       border-radius: 5px;
       box-shadow: 0px 0px 10px #ccc;
       margin: 20px auto;
+      text-align: center;
     }
 
     .search-area h3 {
-      text-align: center;
       color: #333;
     }
 
     .search-area select,
-    .search-area button {
-      display: inline-block;
+    .search-area a > button {
       margin: 10px 5px;
       padding: 10px;
       min-width: 160px;
       border-radius: 5px;
       border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    .search-area a > button {
+      background-color: #0066b3;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
 
     footer {
@@ -131,7 +138,7 @@
       }
 
       .search-area select,
-      .search-area button {
+      .search-area a > button {
         width: 90%;
       }
 
@@ -192,16 +199,22 @@
     <select>
       <option disabled selected>Car Make</option>
       <option>BMW</option>
-      <option>Mercedes</option>
-      <option>Audi</option>
     </select>
 
     <select>
       <option disabled selected>Model</option>
+      <option>1 Series</option>
+      <option>2 Series</option>
       <option>3 Series</option>
+      <option>4 Series</option>
       <option>5 Series</option>
+      <option>7 Series</option>
+      <option>i3</option>
+      <option>i8</option>
       <option>X1</option>
+      <option>X3</option>
       <option>X5</option>
+      <option>Z4</option>
     </select>
 
     <select>
@@ -210,9 +223,53 @@
       <option>SUV</option>
       <option>Coupe</option>
       <option>Convertible</option>
+      <option>Hatchback</option>
+      <option>Estate</option>
     </select>
 
     <select>
       <option disabled selected>Mileage</option>
       <option>Under 10,000</option>
-      <option>10,
+      <option>10,000 - 30,000</option>
+      <option>30,000 - 60,000</option>
+      <option>60,000+</option>
+    </select>
+
+    <select>
+      <option disabled selected>Fuel Economy</option>
+      <option>20+ MPG</option>
+      <option>30+ MPG</option>
+      <option>50+ MPG</option>
+    </select>
+
+    <select>
+      <option disabled selected>Fuel Type</option>
+      <option>Petrol</option>
+      <option>Diesel</option>
+      <option>Hybrid</option>
+      <option>Electric</option>
+    </select>
+
+    <select>
+      <option disabled selected>Extras</option>
+      <option>Leather Seats</option>
+      <option>Sunroof</option>
+      <option>Navigation</option>
+      <option>Heated Seats</option>
+      <option>Parking Sensors</option>
+    </select>
+
+    <br />
+
+    <a href="why-approved-used.html">
+      <button type="button">Search (13,000+ cars!)</button>
+    </a>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; Used BMW Cars for Sale</p>
+</footer>
+
+</body>
+</html>
