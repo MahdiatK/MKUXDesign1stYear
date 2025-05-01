@@ -10,32 +10,38 @@
       padding: 0;
       font-family: Verdana, sans-serif;
       background: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 180px;
-      background-color: #000000;
+      width: 200px;
+      background-color: #000;
       color: white;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding-top: 60px;
-      padding-left: 10px;
-      z-index: 1000;
-    }
-
-    .navbar div {
-      margin: 10px 0;
+      padding: 20px 0;
+      height: 100%;
+      position: fixed;
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
+      padding: 12px 20px;
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: #333;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 0;
+      width: calc(100% - 200px);
+      flex-grow: 1;
     }
 
     header {
@@ -45,23 +51,24 @@
       color: white;
       padding: 60px 20px;
       text-align: center;
-      margin-left: 200px;
     }
 
-    .main-content {
+    .trendy-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px 0;
       text-align: center;
-      padding: 30px 10px;
-      background-color: #ffffff;
-      margin-left: 200px;
     }
 
-    .main-content h2 {
+    .trendy-header h2 {
       margin-bottom: 10px;
     }
 
     .main-content p {
       font-size: 14px;
       color: #555;
+      margin-bottom: 20px;
     }
 
     .browse-btn {
@@ -70,11 +77,12 @@
       padding: 10px 20px;
       border: none;
       margin-top: 15px;
+      cursor: pointer;
     }
 
     .car-listings {
       max-width: 800px;
-      margin: 20px auto 20px 200px;
+      margin: 20px auto;
       padding: 10px;
       background-color: white;
       border-radius: 5px;
@@ -95,27 +103,49 @@
     }
 
     footer {
-      text-align: left;
+      width: 100%;
+      text-align: center;
       font-size: 20px;
       color: #FFF;
       padding: 20px;
       background-color: #000000;
-      margin-left: 200px;
+      box-sizing: border-box;
+    }
+
+    /* Make sure "Browse through our top picks!" is white */
+    header p {
+      color: white !important;
+    }
+
+    .trendy-header p {
+      color: black;
     }
 
     @media screen and (max-width: 600px) {
-      .navbar {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px;
+      body {
+        flex-direction: column;
       }
 
-      header,
-      .main-content,
-      .car-listings,
+      .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+      }
+
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .search-area select,
+      .search-area button {
+        width: 90%;
+      }
+
       footer {
+        position: relative;
         margin-left: 0;
       }
     }
@@ -124,47 +154,49 @@
 <body>
 
   <div class="navbar">
-    <div><a href="index.html">Home</a></div>
-    <div><a href="FindCars.html">Find Cars</a></div>
-    <div><a href="#">Sell or Trade</a></div>
-    <div><a href="#">Why Approved Used?</a></div>
+    <a href="index.html">Home</a>
+    <a href="FindCars.html">Find Cars</a>
+    <a href="sell-or-trade.html">Sell or Trade</a>
+    <a href="why-approved-used.html">Why Approved Used?</a>
   </div>
 
-  <header>
-    <h1>Find a Used BMW</h1>
-    <p>Browse through our top picks!</p>
-  </header>
+  <div class="main-content">
+    <header>
+      <h1>Find a Used BMW</h1>
+      <p>Browse through our top picks!</p>
+    </header>
 
-  <section class="main-content">
-    <h2>Trendy Listings</h2>
-    <p>Check out these trending models!</p>
-  </section>
+    <section class="trendy-header">
+      <h2>Trendy Listings</h2>
+      <p>Check out these trending models!</p>
+    </section>
 
-  <div class="car-listings">
-    <div class="car">
-      <img src="https://m.atcdn.co.uk/vms/media/%7Bresize%7D/138cdcfef10249bfb32237baf9aa026c.jpg" alt="BMW 3 Series">
-      <h3>BMW 3 Series - 2023</h3>
-      <p>Mileage: 12,500 miles</p>
-      <p>Price: £29,024</p>
-    </div>
+    <div class="car-listings">
+      <div class="car">
+        <img src="https://m.atcdn.co.uk/vms/media/%7Bresize%7D/138cdcfef10249bfb32237baf9aa026c.jpg" alt="BMW 3 Series">
+        <h3>BMW 3 Series - 2023</h3>
+        <p>Mileage: 12,500 miles</p>
+        <p>Price: £29,024</p>
+      </div>
 
-    <div class="car">
-      <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1701420806/autoexpress/2023/11/BMW%20X5%20xDrive50%20UK%20drive%202023.jpg" alt="BMW X5">
-      <h3>BMW X5 Hybrid - 2022</h3>
-      <p>Mileage: 8,700 miles</p>
-      <p>Price: £46,640</p>
-    </div>
+      <div class="car">
+        <img src="https://media.autoexpress.co.uk/image/private/s--X-WVjvBW--/f_auto,t_content-image-full-desktop@1/v1701420806/autoexpress/2023/11/BMW%20X5%20xDrive50%20UK%20drive%202023.jpg" alt="BMW X5">
+        <h3>BMW X5 Hybrid - 2022</h3>
+        <p>Mileage: 8,700 miles</p>
+        <p>Price: £46,640</p>
+      </div>
 
-    <div class="car">
-      <img src="https://www.chasingcars.com.au/wp-content/uploads/2021/07/BMW-M2-CS-2021-3.jpg" alt="BMW M2">
-      <h3>BMW M2 CS - 2021</h3>
-      <p>Mileage: 5,100 miles</p>
-      <p>Price: £55,214</p>
+      <div class="car">
+        <img src="https://www.chasingcars.com.au/wp-content/uploads/2021/07/BMW-M2-CS-2021-3.jpg" alt="BMW M2">
+        <h3>BMW M2 CS - 2021</h3>
+        <p>Mileage: 5,100 miles</p>
+        <p>Price: £55,214</p>
+      </div>
     </div>
   </div>
 
   <footer>
-    <span>&copy; Used BMW Cars for Sale</span>
+    <p>&copy; Used BMW Cars for Sale</p>
   </footer>
 
 </body>
