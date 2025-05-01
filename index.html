@@ -10,56 +10,61 @@
       padding: 0;
       font-family: Verdana, sans-serif;
       background: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensure body takes full height */
     }
 
     .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 180px;
-      background-color: #000000;
+      width: 200px;
+      background-color: #000;
       color: white;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      padding-top: 60px;
-      padding-left: 10px;
-      z-index: 1000;
-    }
-
-    .navbar div {
-      margin: 10px 0;
+      padding: 20px 0;
+      height: 100%;
+      position: fixed;
     }
 
     .navbar a {
       color: white;
       text-decoration: none;
-      font-family: Arial, Helvetica, sans-serif;
+      padding: 12px 20px;
+      display: block;
+    }
+
+    .navbar a:hover {
+      background-color: #333;
+    }
+
+    /* Main content area */
+    .main-content {
+      margin-left: 200px;
+      padding: 0;
+      width: calc(100% - 200px);
+      flex-grow: 1; /* Makes the main content area take up remaining space */
     }
 
     header {
-      background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662');
+      background-image: url('https://cdn.dicklovett.co.uk/uploads/header_image/2_220_l.jpg?v=1685641662'); 
       background-size: cover;
       background-position: center;
       color: white;
       padding: 60px 20px;
       text-align: center;
-      margin-left: 200px;
     }
 
-    .main-content {
+    .intro {
       text-align: center;
       padding: 30px 10px;
       background-color: #ffffff;
-      margin-left: 200px;
     }
 
-    .main-content h2 {
+    .intro h2 {
       margin-bottom: 10px;
     }
 
-    .main-content p {
+    .intro p {
       font-size: 14px;
       color: #555;
     }
@@ -70,15 +75,17 @@
       padding: 10px 20px;
       border: none;
       margin-top: 15px;
+      cursor: pointer;
     }
 
     .search-area {
       background-color: #ffffff;
-      margin: 20px auto 20px 200px;
       padding: 20px;
+      width: 90%;
       max-width: 800px;
       border-radius: 5px;
       box-shadow: 0px 0px 10px #ccc;
+      margin: 20px auto;
     }
 
     .search-area h3 {
@@ -96,34 +103,43 @@
       border: 1px solid #ddd;
     }
 
+    /* Footer styles */
     footer {
-      text-align: left;
+      width: 100%;
+      text-align: center;
       font-size: 20px;
       color: #FFF;
       padding: 20px;
       background-color: #000000;
-      margin-left: 200px;
+      box-sizing: border-box;
     }
 
     @media screen and (max-width: 600px) {
-      .navbar {
-        position: relative;
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 10px;
+      body {
+        flex-direction: column;
       }
 
-      header,
-      .main-content,
-      .search-area,
-      footer {
+      .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        position: relative;
+        justify-content: space-around;
+      }
+
+      .main-content {
         margin-left: 0;
+        width: 100%;
       }
 
       .search-area select,
       .search-area button {
         width: 90%;
+      }
+
+      footer {
+        position: relative;
+        margin-left: 0;
       }
     }
   </style>
@@ -131,38 +147,40 @@
 <body>
 
   <div class="navbar">
-    <div><a href="index.html">Home</a></div>
-    <div><a href="FindCars.html">Find Cars</a></div>
-    <div><a href="#">Sell or Trade</a></div>
-    <div><a href="#">Why Approved Used?</a></div>
+    <a href="index.html">Home</a>
+    <a href="FindCars.html">Find Cars</a>
+    <a href="sell-or-trade.html">Sell or Trade</a>
+    <a href="why-approved-used.html">Why Approved Used?</a>
   </div>
 
-  <header>
-    <h1>Used BMW Listings</h1>
-    <p>Your one-stop place to find pre-owned BMWs</p>
-  </header>
+  <div class="main-content">
+    <header>
+      <h1>Used BMW Listings</h1>
+      <p>Your one-stop place to find pre-owned BMWs</p>
+    </header>
 
-  <section class="main-content">
-    <h2>Welcome to the BMW Page!</h2>
-    <p>These cars are inspected. They're good to go.</p>
-    <button class="browse-btn">Browse Listings</button>
-  </section>
+    <section class="intro">
+      <h2>Welcome to the BMW Page!</h2>
+      <p>These cars are inspected. They're good to go.</p>
+      <button class="browse-btn">Browse Listings</button>
+    </section>
 
-  <section class="search-area">
-    <h3>Search Options</h3>
-    <select><option>Enter Postcode</option></select>
-    <select><option>Distance</option></select>
-    <select><option>Payment Option</option></select>
-    <select><option>Car Make</option></select>
-    <select><option>Model</option></select>
-    <select><option>Type of Body</option></select>
-    <select><option>Mileage</option></select>
-    <select><option>Fuel Economy</option></select>
-    <select><option>Fuel Type</option></select>
-    <select><option>Extras</option></select>
-    <br>
-    <button>Search (13,000+ cars!)</button>
-  </section>
+    <section class="search-area">
+      <h3>Search Options</h3>
+      <select><option>Enter Postcode</option></select>
+      <select><option>Distance</option></select>
+      <select><option>Payment Option</option></select>
+      <select><option>Car Make</option></select>
+      <select><option>Model</option></select>
+      <select><option>Type of Body</option></select>
+      <select><option>Mileage</option></select>
+      <select><option>Fuel Economy</option></select>
+      <select><option>Fuel Type</option></select>
+      <select><option>Extras</option></select>
+      <br />
+      <button>Search (13,000+ cars!)</button>
+    </section>
+  </div>
 
   <footer>
     <p>&copy; Used BMW Cars for Sale</p>
