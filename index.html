@@ -12,7 +12,7 @@
       background: #f1f1f1;
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Ensure body takes full height */
+      min-height: 100vh;
     }
 
     .navbar {
@@ -37,12 +37,11 @@
       background-color: #333;
     }
 
-    /* Main content area */
     .main-content {
       margin-left: 200px;
       padding: 0;
       width: calc(100% - 200px);
-      flex-grow: 1; /* Makes the main content area take up remaining space */
+      flex-grow: 1;
     }
 
     header {
@@ -103,7 +102,6 @@
       border: 1px solid #ddd;
     }
 
-    /* Footer styles */
     footer {
       width: 100%;
       text-align: center;
@@ -153,38 +151,68 @@
   <a href="why-approved-used.html">Why Approved Used?</a>
 </div>
 
-  <div class="main-content">
-    <header>
-      <h1>Used BMW Listings</h1>
-      <p>Your one-stop place to find pre-owned BMWs</p>
-    </header>
+<div class="main-content">
+  <header>
+    <h1>Used BMW Listings</h1>
+    <p>Your one-stop place to find pre-owned BMWs</p>
+  </header>
 
-    <section class="intro">
-      <h2>Welcome to the BMW Page!</h2>
-      <p>These cars are inspected. They're good to go.</p>
-      <button class="browse-btn">Browse Listings</button>
-    </section>
+  <section class="intro">
+    <h2>Welcome to the BMW Page!</h2>
+    <p>These cars are inspected. They're good to go.</p>
+    <button class="browse-btn">Browse Listings</button>
+  </section>
 
-    <section class="search-area">
-      <h3>Search Options</h3>
-      <select><option>Enter Postcode</option></select>
-      <select><option>Distance</option></select>
-      <select><option>Payment Option</option></select>
-      <select><option>Car Make</option></select>
-      <select><option>Model</option></select>
-      <select><option>Type of Body</option></select>
-      <select><option>Mileage</option></select>
-      <select><option>Fuel Economy</option></select>
-      <select><option>Fuel Type</option></select>
-      <select><option>Extras</option></select>
-      <br />
-      <button>Search (13,000+ cars!)</button>
-    </section>
-  </div>
+  <section class="search-area">
+    <h3>Search Options</h3>
 
-  <footer>
-    <p>&copy; Used BMW Cars for Sale</p>
-  </footer>
+    <select>
+      <option disabled selected>Enter Postcode</option>
+      <option>SW1A 1AA</option>
+      <option>LS1 4PL</option>
+      <option>B1 1TB</option>
+    </select>
 
-</body>
-</html>
+    <select>
+      <option disabled selected>Distance</option>
+      <option>5 miles</option>
+      <option>10 miles</option>
+      <option>25 miles</option>
+      <option>50 miles</option>
+      <option>100+ miles</option>
+    </select>
+
+    <select>
+      <option disabled selected>Payment Option</option>
+      <option>Finance</option>
+      <option>Cash</option>
+      <option>Part Exchange</option>
+    </select>
+
+    <select>
+      <option disabled selected>Car Make</option>
+      <option>BMW</option>
+      <option>Mercedes</option>
+      <option>Audi</option>
+    </select>
+
+    <select>
+      <option disabled selected>Model</option>
+      <option>3 Series</option>
+      <option>5 Series</option>
+      <option>X1</option>
+      <option>X5</option>
+    </select>
+
+    <select>
+      <option disabled selected>Type of Body</option>
+      <option>Saloon</option>
+      <option>SUV</option>
+      <option>Coupe</option>
+      <option>Convertible</option>
+    </select>
+
+    <select>
+      <option disabled selected>Mileage</option>
+      <option>Under 10,000</option>
+      <option>10,
