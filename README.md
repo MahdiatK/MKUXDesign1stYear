@@ -63,11 +63,11 @@ Why Approved Used - https://imgur.com/a/PTm2pTO
 
 ### Deployment
 
-​- Uploading html files onto GitHub, then deploying via Git Pages
+​- Locally creating and uploading html files onto this repo, then deploying via Git Pages, ensuring it was deployed via the main branch/
 
 ### Local Development
 
-- Notepad, then switched onto editing on Githubs in-built editor
+- Initially created html files to edit and locally test via Notepad, then switched onto editing on Githubs in-built code editor for easier commits.
 
 
 ## Testing
