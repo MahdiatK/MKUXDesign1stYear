@@ -15,7 +15,6 @@ This is a very primitive site that is made primarily of showing a marketplace to
 
 
 - I will be using a mixture of white colour text against the darker contrasting background colours. (Vice versa for the navbars and footer text)
-  - 'you notes goes here '
 
   - **Structure**
     - No templates used, I wanted to have my own approach to the layout.
